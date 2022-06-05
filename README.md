@@ -1,2 +1,2 @@
 # The-Key-Programming-Language
-what if... no characters
+> Programming language without characters
