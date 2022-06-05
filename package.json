@@ -1,0 +1,26 @@
+{
+  "name": "the-key-programming-language",
+  "version": "1.0.0",
+  "description": "> Programming language without characters",
+  "main": "index.js",
+  "scripts": {
+    "compile": "echo \"Test\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JustFoxx/The-Key-Programming-Language.git"
+  },
+  "keywords": [],
+  "author": "JustFoxx",
+  "license": "LGPL-3.0",
+  "bugs": {
+    "url": "https://github.com/JustFoxx/The-Key-Programming-Language/issues"
+  },
+  "homepage": "https://github.com/JustFoxx/The-Key-Programming-Language#readme",
+  "devDependencies": {
+    "typescript": "^4.7.3"
+  },
+  "dependencies": {
+    "nexe": "^4.0.0-rc.1"
+  }
+}
