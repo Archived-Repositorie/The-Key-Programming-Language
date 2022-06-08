@@ -1,3 +1,4 @@
 STRING text BE "hewwo owo"
 INT i BE 1
 FLOAT pi BE 3.14
+BOOL binary BE True

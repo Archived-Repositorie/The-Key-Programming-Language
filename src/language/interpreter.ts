@@ -37,7 +37,7 @@ export class Interpreter {
             case word.toUpperCase() === word && new Regexs().testWord(word):
                 this.words.push({ type: "builtin", name: word });
                 break;
-            case word == "True".split("").join() && word === "False".split("").join():
+            case word == String("True") || word === String("False"):
                 this.words.push({ type: "boolean", name: word });
                 break;
             case word.startsWith("\"") && word.endsWith("\"") || word.startsWith("'") && word.endsWith("'"):
