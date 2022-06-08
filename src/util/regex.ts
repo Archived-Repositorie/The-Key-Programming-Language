@@ -18,4 +18,8 @@ export class Regexs {
         }
         return this.output;
     }
+
+    testWord(word: string): boolean {
+        return /^[a-zA-Z]+$/.test(word);
+    }
 }

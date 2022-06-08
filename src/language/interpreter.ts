@@ -34,7 +34,7 @@ export class Interpreter {
 
     private wordAssigment(word: string, line: Line) {
         switch (true) {
-            case word.toUpperCase() === word && /^[a-zA-Z]+$/.test(word):
+            case word.toUpperCase() === word && new Regexs().testWord(word):
                 this.words.push({ type: "builtin", name: word });
                 break;
             case word == "True":
@@ -50,7 +50,7 @@ export class Interpreter {
             case !isNaN(parseFloat(word)) && parseFloat(word) == parseInt(word):
                 this.words.push({ type: "int", name: word });
                 break;
-            case isNaN(parseFloat(word)):
+            case new Regexs().testWord(word):
                 this.words.push({ type: "variable", name: word });
                 break;
             default:
