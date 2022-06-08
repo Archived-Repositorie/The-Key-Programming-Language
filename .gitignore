@@ -2,5 +2,9 @@ node_modules/
 
 package-lock.json
 build/
+src/**/*.js
+src/**/*.js.map
+src/**/*.d.ts
+
 
 kl-*.tgz

@@ -1,14 +1,20 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "esNext",
     "module": "commonjs",
-    "lib": ["es6"],
-    "allowJs": true,
-    "outDir": "build",
-    "rootDir": "src",
-    "strict": true,
+    "declaration": true,
     "noImplicitAny": true,
-    "esModuleInterop": true,
-    "resolveJsonModule": true
-  }
+    "removeComments": true,
+    "experimentalDecorators": true,
+    "rootDir": ".",
+    "sourceMap": true,
+    "listFiles": true,
+    "newLine": "LF",
+    "noEmitOnError": true
+  },
+  "exclude": [
+    "bin",
+    "build",
+    "node_modules"
+  ],
 }

@@ -5,12 +5,14 @@
   "main": "build/index.js",
   "scripts": {
     "pkg": "npm i .",
-    "install": "npm run compile & npm run package & sudo npm i kl-1.0.0.tgz -g",
-    "uninstall": "npm uninstall kl -g",
-    "start": "npx ts-node src/index.ts",
-    "package": "npm pack",
+    "install_app": "npm run compile & npm pack & npm i kl-1.0.0.tgz -g & npm link",
+    "uninstall_app": "npm uninstall kl -g",
+    "start": "npx tsc & npx ts-node src/index.ts",
     "compile": "npx tsc",
     "debug": "npx tsc --inspect"
+  },
+  "bin": {
+    "kl": "bin/run.js"
   },
   "repository": {
     "type": "git",
