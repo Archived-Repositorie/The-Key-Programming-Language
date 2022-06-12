@@ -3,6 +3,12 @@ import { Line, Word } from "./interpreter";
 
 export const handler = (words: Word[], lines: Line[]) => {
     words.forEach(word => {
-        require(`./keys/${word}`).cmd(word, words, word.line, lines);
+        const args: Word[] = words.filter(x => x.numberOnLine >= word.numberOnLine + 1);
+        switch (word.type) {
+            case "builtin":
+                try {require(`./keys/${word.name}`).cmd(word, words, word.line, lines, args)}
+                catch (e) {}
+                break;
+        }
     })
 }
